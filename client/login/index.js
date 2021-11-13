@@ -31,6 +31,10 @@ if(user.length<=0||user.length<=0){
 function res(dados){
 
     const db = JSON.parse(dados);
+    
+    if(db.status==true){
     localStorage.setItem('tokenLoja',db.token);
     location.replace('../home/index.html');
-}
+}else{
+alert('usuario ou senha incorretos');
+}}
