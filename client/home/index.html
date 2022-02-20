@@ -11,14 +11,20 @@
 </head>
 <body>
     <h1>Painel de Pedidos</h1>
-
+    <div id="lista"></div>
+   
     <script>
         const socket = io('https://pedidos-delivery.herokuapp.com');
         socket.on('connection',(sk)=>{
            console.log('conectado');
         })
         socket.on('Pedidos',(msg)=>{
-            console.table(msg);
+           document.getElementById("lista").innerHTML+=`
+           <div id="item">
+           <h3>${msg.nome}</h3>
+           <p> Valor: ${msg.preco}</p>
+            </div>
+           `;
         })
     </script>
 </body>
