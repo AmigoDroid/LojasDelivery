@@ -12,6 +12,7 @@
 <body>
     <h1>Painel de Pedidos</h1>
     <div id="lista"></div>
+    
    
     <script>
         const socket = io('https://pedidos-delivery.herokuapp.com');
@@ -23,6 +24,7 @@
            <div id="item">
            <h3>${msg.nome}</h3>
            <p> Valor: ${msg.preco}</p>
+           <hr>
             </div>
            `;
         })
