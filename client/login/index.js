@@ -35,7 +35,7 @@ function res(dados){
     if(db.status==true){
     localStorage.setItem('tokenLoja',db.token);
     localStorage.setItem('idLoja',db.idLoja);
-    location.replace('https://pedidos-delivery.herokuapp.com/home/'+db.idLoja);
+    location.replace('../home/index.html');
 }else{
 alert('usuario ou senha incorretos');
 }}
