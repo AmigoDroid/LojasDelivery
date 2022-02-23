@@ -15,11 +15,15 @@
     
    
     <script>
-        const socket = io('https://pedidos-delivery.herokuapp.com');
+        const api ='https://pedidos-delivery.herokuapp.com';
+        const local = 'http://localhost:5500';
+        const IdLoja = localStorage.getItem("idLoja");
+        
+        const socket = io(api);
         socket.on('connection',(sk)=>{
            console.log('conectado');
         })
-        socket.on('Pedidos',(msg)=>{
+        socket.on('ConectId:'+IdLoja,(msg)=>{
            document.getElementById("lista").innerHTML+=`
            <div id="item">
            <h3>${msg.nome}</h3>
