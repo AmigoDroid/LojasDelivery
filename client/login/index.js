@@ -10,7 +10,6 @@ if(user.length<=0||user.length<=0){
 
 }else{
     const url='https://api-server-delivery.herokuapp.com/login/loja'
-
     const body ={
         username:user,
         password:pass
