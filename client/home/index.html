@@ -23,8 +23,7 @@
         socket.on('connection',(sk)=>{
            console.log('conectado');
         })
-        socket.emit('logar','loja');
-        socket.on('ConectId:'+IdLoja,(msg)=>{
+        socket.on('pedidos',(msg)=>{
            document.getElementById("lista").innerHTML+=`
            <div id="item">
            <h3>${msg.nome}</h3>
