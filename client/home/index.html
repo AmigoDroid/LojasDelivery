@@ -20,6 +20,7 @@
         const IdLoja = localStorage.getItem("idLoja");
         
         const socket = io(api);
+        
         socket.on('connection',(sk)=>{
            console.log('conectado');
         })
